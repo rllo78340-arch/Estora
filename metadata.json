@@ -1,0 +1,6 @@
+{
+  "name": "ESTORA",
+  "description": "Unified Real Estate Marketplace platform for verified residential, commercial, and investment properties.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

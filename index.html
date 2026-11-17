@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru" dir="ltr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ESTORA — Элитная недвижимость Узбекистана</title>
+    <meta
+      name="description"
+      content="ESTORA — премиальная платформа для продажи, покупки и аренды недвижимости исключительно в Узбекистане."
+    />
+    <meta property="og:title" content="ESTORA — Элитная недвижимость Узбекистана" />
+    <meta
+      property="og:description"
+      content="ESTORA — премиальная платформа для продажи, покупки и аренды недвижимости исключительно в Узбекистане."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        try {
+          var lang = localStorage.getItem('estora_lang_v1');
+          var allowed = ['en', 'zh', 'hi', 'es', 'ar', 'fr', 'pt', 'bn', 'ru', 'uz'];
+          if (lang && allowed.indexOf(lang) !== -1) {
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+          }
+          var mode = localStorage.getItem('estora_theme_v1');
+          var sysDark =
+            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (mode === 'dark' || (mode === 'system' && sysDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#F8F8F7] text-[#171717] antialiased transition-colors duration-200 selection:bg-[#143A30] selection:text-white dark:bg-[#111111] dark:text-[#F5F5F5]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
